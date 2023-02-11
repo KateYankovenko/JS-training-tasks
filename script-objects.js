@@ -70,24 +70,44 @@ const loginToFind = "Ben";
  * - updateRating
  * - getTrackCount
  */
-const playlist = {
-    name: "My playlist",
-    tracks: ["Candy", "Owl", "Dream"],
-    owner: "Pola",
-    rating: 65,
-    getTrackCount() {
-        console.log(this.tracks.length);
-    },
+// const playlist = {
+//     name: "My playlist",
+//     tracks: ["Candy", "Owl", "Dream"],
+//     owner: "Pola",
+//     rating: 65,
+//     getTrackCount() {
+//         console.log(this.tracks.length);
+//     },
+// };
+// console.log(playlist.name="The Best Tracks")
+
+// console.log(playlist.tracks.push("Dunno"))
+// console.log(playlist)
+
+// console.log(playlist.rating = 432)
+// console.log(playlist)
+
+// playlist.getTrackCount();
+
+/*
+ * Перебор через for...in и Object.keys|values|entries
+ */
+const books = {
+    name: "Dagon",
+    pages: 78,
 };
-console.log(playlist.name="The Best Tracks")
-
-console.log(playlist.tracks.push("Dunno"))
-console.log(playlist)
-
-console.log(playlist.rating = 432)
-console.log(playlist)
-
-playlist.getTrackCount();
+const magazine = Object.create(books);
+magazine.author = "Base";
+// for (const key in books) {
+//     if (books.hasOwnProperty("pages")) {
+//       console.log(books[key])
+//     }
+// }
+// console.log(magazine.hasOwnProperty('name'))
+// const keys = Object.keys(magazine)
+// console.log(keys)
+const entr = Object.entries(books)
+console.log(entr)
 
 
 
