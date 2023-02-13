@@ -13,8 +13,8 @@
 // b?console.log("truthy"):console.log("faulthy")
 
 //total sum of all array's even numbers
-const userLogins = ["Linda", "Ben", "Nelly", "Denis"];
-const loginToFind = "Ben";
+// const userLogins = ["Linda", "Ben", "Nelly", "Denis"];
+// const loginToFind = "Ben";
 // let message = `There is no ${loginToFind}`;;
 // for (let login of userLogins) {
 //     if (login === loginToFind) {
@@ -92,12 +92,12 @@ const loginToFind = "Ben";
 /*
  * Перебор через for...in и Object.keys|values|entries
  */
-const books = {
-    name: "Dagon",
-    pages: 78,
-};
-const magazine = Object.create(books);
-magazine.author = "Base";
+// const books = {
+//     name: "Dagon",
+//     pages: 78,
+// };
+// const magazine = Object.create(books);
+// magazine.author = "Base";
 // for (const key in books) {
 //     if (books.hasOwnProperty("pages")) {
 //       console.log(books[key])
@@ -106,13 +106,75 @@ magazine.author = "Base";
 // console.log(magazine.hasOwnProperty('name'))
 // const keys = Object.keys(magazine)
 // console.log(keys)
-const entr = Object.entries(books)
-console.log(entr)
 
+// const filterNumbers = function (array,...args) {
+//     console.log("We have two arrays to compare!");
+//     console.log(args)
+//
+//     let commonNumbers = [];
 
+//     for (let arr of array){
+//            if (args.includes(arr)) {
+//                commonNumbers += arr;
+//     }
+//     }
 
+//     return commonNumbers;
+// }
 
+// filterNumbers([1,2,4,5,6],6,2)
 
+// const height = 168;
+// const weight = 51;
+// const location = "Poland";
+// const user = {
+//     name: "Jack",
+//     age: 27,
+//     [height]: height,
+//     [weight]: weight,
+//     tracks: [],
+//     location,
+//     changeName(inpName){
+//         return user.name = inpName;
+//     },
+//     addHobby(hobby) {
+//         return user.hobby = hobby;
+//     },
+//     addMusicTracks(...track) {
+//         return this.tracks.push(...track)
+//     },
+//     getTrackCount() {
+//         return this.tracks.length;
+//     },
+// }
+
+// console.log(user.changeName("Sammy"))
+// console.log(user.addHobby("music"))
+// console.log(user.addMusicTracks("Fabiano!!!", "Gray", "Magnolia")) 
+// console.log(user.getTrackCount())
+
+// user.religion = "Baptist"
+
+// console.log(Object.entries(user))
+// console.log(user.hasOwnProperty("height"))
+// console.log(user.hasOwnProperty("weight"))
+
+// console.log(user[weight]);
+// console.log(user[height])
+// console.log(user["age"])
+// console.log(user.location)
+// console.log(user)
+
+// const a = { b: 5, c: 3, };
+// const x = a;
+// a.d = 6;
+// console.log(x === a)
+// console.log([1] === [1])
+
+// const arr1 = [1, 4, 5]
+// const arr2 = arr1;
+// console.log(arr1 === arr2)
+// console.log([1,2,3]===[1,2,3])
 
 
 
