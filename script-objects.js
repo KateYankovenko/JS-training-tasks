@@ -150,7 +150,7 @@
 
 // console.log(user.changeName("Sammy"))
 // console.log(user.addHobby("music"))
-// console.log(user.addMusicTracks("Fabiano!!!", "Gray", "Magnolia")) 
+// console.log(user.addMusicTracks("Fabiano!!!", "Gray", "Magnolia"))
 // console.log(user.getTrackCount())
 
 // user.religion = "Baptist"
@@ -177,7 +177,56 @@
 // console.log([1,2,3]===[1,2,3])
 
 
+const friends = [
+     {
+        name: "Joe",
+        age: 33,
+    },
+    {
+        name: "Zoe",
+        age: 30,
+    },
+     {
+        name: "Roe",
+        age: 37,
+    },
+     {
+        name: "Moe",
+        age: 34,
+    },
+]
 
+console.table(friends)
 
+// for (let friend of friends) {
+//     console.log(friend)
+//     friend.legs = 4;
+// }
 
+//find friend by name: true/false
+
+const findName = function (allFriends, friendName) { 
+    let message = `${friendName} is not here!`;
+
+    for (const friend of allFriends) {
+        
+    if (friend.name === friendName) {
+        message = `${friendName} IS here!`;
+    }    
+    }
+    return message; 
+}
+console.log(findName(friends, "Roe"))
+console.log(findName(friends, "Foe"))
     
+const getAllNames = function (users) {
+    const nameArr = [];
+    for (let user of users) {
+        if (user.name) {
+            nameArr.push(user.name);
+        }
+    }
+    return nameArr;
+}
+console.log(getAllNames(friends))
+
