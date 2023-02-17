@@ -196,7 +196,7 @@ const friends = [
     },
 ]
 
-console.table(friends)
+// console.table(friends)
 
 // for (let friend of friends) {
 //     console.log(friend)
@@ -205,28 +205,129 @@ console.table(friends)
 
 //find friend by name: true/false
 
-const findName = function (allFriends, friendName) { 
-    let message = `${friendName} is not here!`;
+// const findName = function (allFriends, friendName) { 
+//     let message = `${friendName} is not here!`;
 
-    for (const friend of allFriends) {
+//     for (const friend of allFriends) {
         
-    if (friend.name === friendName) {
-        message = `${friendName} IS here!`;
-    }    
-    }
-    return message; 
-}
-console.log(findName(friends, "Roe"))
-console.log(findName(friends, "Foe"))
+//     if (friend.name === friendName) {
+//         message = `${friendName} IS here!`;
+//     }    
+//     }
+//     return message; 
+// }
+// console.log(findName(friends, "Roe"))
+// console.log(findName(friends, "Foe"))
     
-const getAllNames = function (users) {
-    const nameArr = [];
-    for (let user of users) {
-        if (user.name) {
-            nameArr.push(user.name);
-        }
-    }
-    return nameArr;
-}
-console.log(getAllNames(friends))
+// const getAllNames = function (users) {
+//     const nameArr = [];
+//     for (let user of users) {
+//         if (user.name) {
+//             nameArr.push(user.name);
+//         }
+//     }
+//     return nameArr;
+// }
+// console.log(getAllNames(friends))
 
+//keys quontity?
+// const x = {
+//     a: 1,
+//     b: 2,
+//     c: 3,
+//     d: 4,
+// }
+// const keysNumbr = Object.keys(x).length
+// console.log(keysNumbr)
+
+
+//goods cart:
+
+// const cart = {
+//     items: [
+//         { name: "Peach", price: 55, },
+//         { name: "Malone", price: 58, },
+//         { name: "Apple", price: 63, },
+//         {name: "Grape", price: 453,},
+//     ],
+//     getItems() {
+//         return this.items;
+//     },
+//     add(product = {}) {
+//         this.items.push(product);
+//      },
+//     remove(product) {
+      
+//      },
+//     clear() { },
+//     countTotalPrice() { },
+//     increaseQuantity(product) {
+//         items.product.quantity += 1;
+//      },
+//     decreaseQuantuty(product){},
+// }
+
+// cart.add({ name: "Cherry", price: 72, })
+// cart.add({ name: "Cranberry", price: 90, })
+// cart.add({ name: "Watermalone", price: 431, })
+// console.log(cart.items)
+
+// cart.remove({ name: "Cherry", price: 72, })
+// console.log(cart.items)
+
+// cart.increaseQuantity({ name: "Cranberry", price: 90, })
+// console.log(cart.quantity)
+
+
+const user = {
+    name: "Jocellyn",
+    age: 34,
+}
+
+const { name, age } = user;
+console.log(age)
+const inp = {
+    firstName: "Dafna",
+    lastName: "",
+    info: {
+        work: "EasyCode",
+        skills: ["HTML", "JS"],
+    },
+}
+const d = inp.firstName;
+const { firstName = d , lastName, info: {work, skills} } = inp;
+console.log(firstName)
+console.log(work)
+
+const colors = ["white", "black", "red"];
+const [w, b, r, g = "gren"] = colors;
+console.log(w, b,r)
+
+
+const ukrCitiesWithPopulation = {
+    Odesa: 3,
+    Kyiv: 4,
+    Lviv: 2.6,
+    Dnipro: 2,
+    Kharkiv: 3,
+}
+
+const usaCitiesWithPopulation = {
+    SanFrancisco: 5,
+    NewYork: 8,
+    Arkham: 0.5,
+    Insmut: 1,
+    JerusalemsLot: 1.5,
+}
+
+console.log({ ...usaCitiesWithPopulation })
+
+const arr1 = [3,5,6,8]
+console.log(Math.max(...arr1))
+
+
+const { SanFrancisco, NewYork, Arkham, Insmut, JerusalemsLot } = ukrCitiesWithPopulation
+
+function fn(ukrCitiesWithPopulation, ...params) {
+    
+}
