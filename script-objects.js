@@ -279,55 +279,137 @@ const friends = [
 // console.log(cart.quantity)
 
 
-const user = {
-    name: "Jocellyn",
-    age: 34,
-}
+// const user = {
+//     name: "Jocellyn",
+//     age: 34,
+// }
 
-const { name, age } = user;
-console.log(age)
-const inp = {
-    firstName: "Dafna",
-    lastName: "",
-    info: {
-        work: "EasyCode",
-        skills: ["HTML", "JS"],
-    },
-}
-const d = inp.firstName;
-const { firstName = d , lastName, info: {work, skills} } = inp;
-console.log(firstName)
-console.log(work)
+// const { name, age } = user;
+// console.log(age)
+// const inp = {
+//     firstName: "Dafna",
+//     lastName: "",
+//     info: {
+//         work: "EasyCode",
+//         skills: ["HTML", "JS"],
+//     },
+// }
+// const d = inp.firstName;
+// const { firstName = d , lastName, info: {work, skills} } = inp;
+// console.log(firstName)
+// console.log(work)
 
-const colors = ["white", "black", "red"];
-const [w, b, r, g = "gren"] = colors;
-console.log(w, b,r)
-
-
-const ukrCitiesWithPopulation = {
-    Odesa: 3,
-    Kyiv: 4,
-    Lviv: 2.6,
-    Dnipro: 2,
-    Kharkiv: 3,
-}
-
-const usaCitiesWithPopulation = {
-    SanFrancisco: 5,
-    NewYork: 8,
-    Arkham: 0.5,
-    Insmut: 1,
-    JerusalemsLot: 1.5,
-}
-
-console.log({ ...usaCitiesWithPopulation })
-
-const arr1 = [3,5,6,8]
-console.log(Math.max(...arr1))
+// const colors = ["white", "black", "red"];
+// const [w, b, r, g = "gren"] = colors;
+// console.log(w, b,r)
 
 
-const { SanFrancisco, NewYork, Arkham, Insmut, JerusalemsLot } = ukrCitiesWithPopulation
+// const ukrCitiesWithPopulation = {
+//     Odesa: 3,
+//     Kyiv: 4,
+//     Lviv: 2.6,
+//     Dnipro: 2,
+//     Kharkiv: 3,
+// }
 
-function fn(ukrCitiesWithPopulation, ...params) {
-    
-}
+// const usaCitiesWithPopulation = {
+//     SanFrancisco: 5,
+//     NewYork: 8,
+//     Arkham: 0.5,
+//     Insmut: 1,
+//     JerusalemsLot: 1.5,
+// }
+
+// console.log({ ...usaCitiesWithPopulation })
+
+// const arr1 = [3,5,6,8]
+// console.log(Math.max(...arr1))
+
+
+// const { SanFrancisco, NewYork, Arkham, Insmut, JerusalemsLot } = ukrCitiesWithPopulation
+
+// function fn(ukrCitiesWithPopulation, ...params) {
+//     console.log(...params)
+// }
+
+// fn("Insmut", 5, 6, 7);
+
+// const newObjC = { ...ukrCitiesWithPopulation, ...usaCitiesWithPopulation };
+// console.log(newObjC);
+
+// const arrA = [4, 6, 7]
+// const arrB = [7, 8, 9]
+// const arrC = [...arrA, 345, 678, 890, ...arrB]
+// console.log(arrC)
+
+// const joJo = {
+//     nameA: {
+//         first: "Jo",
+//         second: "JoKo",
+//         father: {
+//             my: "Yes",
+//             not: "No",
+//         }
+//     },
+//     ageA: 56,
+// }
+
+// const { nameA: { first, second, father: {my, not} }, ageA } = joJo;
+// console.log(first)
+// console.log(my)
+
+
+// Колбек-функція
+// function greet(name) {
+//   console.log(`Ласкаво просимо ${name}.`);
+// }
+
+// // Функція вищого порядку
+// function registerGuest(name, callback) {
+//   console.log(`Реєструємо гостя ${name}.`);
+//   callback(name);
+// }
+
+// registerGuest("Манго", greet);
+
+
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   // Імітуємо доступність абонента випадковим числом
+//   const isRecipientAvailable = Math.random() > 0.5;
+
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+
+//   onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+//   console.log(`З'єднуємо з ${name}, очікуйте...`);
+//   // Логіка прийняття дзвінка
+// }
+
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
+//   // Логіка активації автовідповідача
+// }
+
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступний, записуємо голограму.`);
+//   // Логіка запису голограми
+// }
+
+// processCall("Манго", takeCall, activateAnsweringMachine);
+// processCall("Полі", takeCall, leaveHoloMessage);
+
+
+// const add = (...args) => {
+//   console.log(args);
+// };
+
+// add(1, 2, 3); 
+
+
+// const arr3 = [5, 7, 8, 9, 1, 2, 3]
+ 
