@@ -54,7 +54,8 @@ const cart = {
 
         return total;
     },
-    increaseQuantity(productName) {},
+    increaseQuantity(productName) { },
+    
     decreaseQuantity(productName, callback) {
         const { items } = this;
         for (let item of items) {
@@ -66,6 +67,23 @@ const cart = {
         callback(productName);
     },
 }
+
+
+// This is a function that will be passed as a callback(
+// for decreaseQuantity function)for deleting a product from 
+// a cart, if quantity of this product === 0 
+function toZeroQuantityGoodDelete(productName) {
+    for (let i = 0; i < cart.items.length; i += 1){
+        
+        if (cart.items[i].quantity === 0) {
+            cart.items.splice(i, 1);
+            
+            console.log("This good with zero quantity:", productName);
+            return;
+        }
+    }
+}
+
 
 console.log(cart.getItems())
 
@@ -83,17 +101,7 @@ console.table(cart.items)
 
 console.log("Total price is:", cart.countTotalPrice())
 
-cart.decreaseQuantity("Watermalone", function toZeroQuantityGoodDelete(productName, remove) {
-    for (let i = 0; i < cart.items.length; i += 1){
-        
-        if (cart.items[i].quantity === 0) {
-            cart.items.splice(i, 1);
-            
-            console.log("This good with zero quantity:", productName);
-            return;
-        }
-    }
-})
+cart.decreaseQuantity("Watermalone", toZeroQuantityGoodDelete)
 console.table(cart.items)
 
 
