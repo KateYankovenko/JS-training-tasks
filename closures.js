@@ -134,37 +134,48 @@ const rounder = function (places) {
 // console.log(rounder2(5.4512312312367));
 
 
+
+//------------------------------------------Closures in fuctions-----------------------//
+
+
+
+
+    // Когда вы объявляете новую функцию и присваиваете её переменной,
+    //     то в этой переменной вы храните не только определение функции,
+    //     но и её замыкание.Замыкание содержит все переменные, которые 
+    //         находятся в области видимости во время создания функции.
+
 /*
  * Приватные данные и функции - скрытие реализации, интерфейс
  */
 
-const salaryManagerFactory = function (employeeName, baseSalary = 0) {
-    let salary = baseSalary;
+// const salaryManagerFactory = function (employeeName, baseSalary = 0) {
+//     let salary = baseSalary;
 
-    return {
-        raise(amount) {
-            if (amount > 1000) {
-                return 'Too much';
-            }
+//     return {
+//         raise(amount) {
+//             if (amount > 1000) {
+//                 return 'Too much';
+//             }
 
-            salary += amount;
-        },
-        lower(amount) {
-            salary -= amount;
-        },
-        current() {
-            return `Salary nowadays is ${employeeName} - ${salary}`;
-        },
-    };
-};
+//             salary += amount;
+//         },
+//         lower(amount) {
+//             salary -= amount;
+//         },
+//         current() {
+//             return `Salary nowadays is ${employeeName} - ${salary}`;
+//         },
+//     };
+// };
 
-const salaryManager = salaryManagerFactory('Mango', 5000);
+// const salaryManager = salaryManagerFactory('Mango', 5000);
 
-console.log(salaryManager.current());
+// console.log(salaryManager.current());
 
-console.log(salaryManager.raise(10000000));
+// console.log(salaryManager.raise(10000000));
 
-console.log(salaryManager.current());
+// console.log(salaryManager.current());
 
 // const myLibFactory = function () {
 //     let value = 0;
@@ -189,3 +200,41 @@ console.log(salaryManager.current());
 // console.log(myLib.getValue());
 // myLib.add(10);
 // console.log(myLib.getValue());
+
+
+// const fnH = () => ({ a: 6 });
+// console.log(fnH())
+
+
+//--------------------------------Closures expl. exmpls. get from: medium.com/nuances-of-programming/
+
+// let val = 7
+//  function createAdder() {
+//    function addNumbers(a, b) {
+//       let ret = a + b
+//       return ret
+//     }
+//     return addNumbers
+//   }
+//   let adder = createAdder()
+// let sum = adder(val, 8)
+//  console.log(adder)
+//  console.log('example of function returning a function: ', sum)
+
+
+
+
+//  function createCounter() {
+//    let counter = 0
+//    const myFunction = function() {
+//      counter = counter + 1
+//      return counter
+//    }
+//    return myFunction
+//  }
+//  const increment = createCounter()
+//  const c1 = increment()
+//  const c2 = increment()
+//  const c3 = increment()
+//  console.log('example increment', c1, c2, c3)
+
