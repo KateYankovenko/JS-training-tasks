@@ -207,6 +207,8 @@ const rounder = function (places) {
 
 
 //--------------------------------Closures expl. exmpls. get from: medium.com/nuances-of-programming/
+// Замыкание — это коллекция всех переменных из области видимости во время создания функции.
+
 
 // let val = 7
 //  function createAdder() {
@@ -232,7 +234,7 @@ const rounder = function (places) {
 //    }
 //    return myFunction
 //  }
-//  const increment = createCounter()
+//  const increment = createCounter()//Обява має опис ф-ії myFunction разом із замиканням на лок.обл.вид. зі всіма лок.змінними
 //  const c1 = increment()
 //  const c2 = increment()
 //  const c3 = increment()
