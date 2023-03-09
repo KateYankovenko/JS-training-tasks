@@ -28,6 +28,38 @@
 // console.log(bigNums)
 
 
+// Дан массив с числами. Оставьте в нем только четные числа.
+// const numbers = [6, 8, 90, 45, 3, 1, 7,12,73]
+// const evenNums = [];
+// console.log(numbers.filter(number=>number%2==0))
+
+
+// Дан массив со строками. Оставьте в нем только те строки, длина которых больше 5-ти символов.
+// const strings = ["Koala", "Bear", "Bavaria", "Jo", "Calipso"]
+// const newStr = []
+// console.log(strings.filter(string=>string.length>5))
+
+
+// Дан массив, в нем могут быть обычные элементы и подмассивы, например[1, 2, [3, 4], 5, [6, 7]].
+// Оставьте в нем только подмассивы.
+// const numbers = [6, 8, 90, 45, [3, 4], 3, 1, [6, 7], 7, 12, 73]
+// const newArr = numbers.filter(number => Array.isArray(number))
+
+// console.log(newArr)
+
+
+// Дан массив с числами. Посчитайте количество отрицательных чисел в этом массиве.
+// const numbers = [6, 8, -90, 45, -3, -1, 7, -12, -73]
+// let negativeTotalQuantity = numbers.filter(number => number < 0)
+// console.log(negativeTotalQuantity.length)//5
+
+
+
+
+
+
+
+
 
 
 // const planets = ["Земля", "Марс", "Венера", "Юпітер"];
@@ -46,19 +78,39 @@
 // console.log(names)
 
 
-const students = [
-  { name: "Манго", courses: ["математика", "фізика"] },
-  { name: "Полі", courses: ["інформатика", "математика"] },
-  { name: "Ківі", courses: ["фізика", "біологія"] },
-];
+// const students = [
+//   { name: "Манго", courses: ["математика", "фізика"] },
+//   { name: "Полі", courses: ["інформатика", "математика"] },
+//   { name: "Ківі", courses: ["фізика", "біологія"] },
+// ];
+
 // const coursesAll = students.flatMap(student => student.courses)
-// console.log(coursesAll)
-
-// const uniqueCourses = coursesAll.filter((course, indx, array) => array.indexOf(course) === indx)
-// console.log(uniqueCourses)
-
-const coursesAll = students.flatMap(student => student.courses)
-    .filter((course, indx, array) => array.indexOf(course) === indx);
-console.log(coursesAll);
+//     .filter((course, indx, array) => array.indexOf(course) === indx);
+// console.log(coursesAll);
                    
+// const userName = students.find(({ name }) => name === "Ківі")
+// console.log(userName)
+
+// const courseIndx = students.findIndex(student => student.name === "Полі")
+// console.log(courseIndx)
+
+// console.log([67,8,0,-45].every(elem=>elem>=0))
+// console.log([-67,-8,0,-90].every(elem=>elem<=0))
+
+// console.log([67,8,0,-45].some(elem=>elem>=0))
+
+// const fruits = [
+//   { name: "apples", amount: 100 },
+//   { name: "bananas", amount: 0 },
+//   { name: "grapes", amount: 50 },
+// ];
+
+// const allAvailable = fruits.every(fruit => fruit.amount > 0); // false
+
+// const anyAvailable = fruits.some(fruits => fruits.amount > 0); // true
+
+
+
+
+
 
