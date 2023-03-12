@@ -64,13 +64,61 @@
 
 // Дан массив с числами.Оставьте в нем только положительные числа.
 // Затем извлеките квадратный корень и этих чисел.
-const numbers = [23, 67, 89, 0, -1, 4,-98];
-const positiveNums = numbers.filter(number => number > 0)
-.map(number=>Number(Math.sqrt(number).toFixed(2)))
-console.log(positiveNums)
+// const numbers = [23, 67, 89, 0, -1, 4,-98];
+// const positiveNums = numbers.filter(number => number > 0)
+// .map(number=>Number(Math.sqrt(number).toFixed(2)))
+// console.log(positiveNums)
 
 
+/*
+ * Считаем общее количество часов
+ */
 
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+//   { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+// ];
+// let total = 0;
+
+// const timePlayed = players.map(player => player.timePlayed)//[310, 470, 230, 150, 80]
+// timePlayed.reduce(number => total += number)//2480
+// console.log(timePlayed)
+// console.log(total)
+
+
+/*
+ * Считаем общую сумму товаров корзины
+ */
+// const cart = [
+//   { label: 'Apples', price: 100, quantity: 2 },
+//   { label: 'Bananas', price: 120, quantity: 3 },
+//   { label: 'Lemons', price: 70, quantity: 4 },
+// ];
+
+// let totalAmount = cart.map(cart => cart.price)
+//     .reduce((total, price) => total += price, 0)
+// console.log(totalAmount)//290
+
+
+/*
+ * Собираем все теги из твитов
+ */
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const allTags = tweets.flatMap(tweet => tweet.tags)//['js', 'nodejs', 'html', 'css', 'html', 'js', 'nodejs', 'css', 'react', 'js', 'nodejs', 'react']
+// const uniqueTags = allTags.filter((tag,index,array) => array.indexOf(tag)===index)
+
+// console.log(allTags)
+// console.log(uniqueTags)
 
 
 
