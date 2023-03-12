@@ -54,6 +54,20 @@
 // console.log(negativeTotalQuantity.length)//5
 
 
+// Дан массив с числами. Найдите сумму этих чисел.
+// const numbers = [23, 67, 89, 0, -1, 4];
+// let total = numbers.reduce((previousNumber, number) => {
+//    return previousNumber + number;
+// },0)
+// console.log(total)
+
+
+// Дан массив с числами.Оставьте в нем только положительные числа.
+// Затем извлеките квадратный корень и этих чисел.
+const numbers = [23, 67, 89, 0, -1, 4,-98];
+const positiveNums = numbers.filter(number => number > 0)
+.map(number=>Number(Math.sqrt(number).toFixed(2)))
+console.log(positiveNums)
 
 
 
